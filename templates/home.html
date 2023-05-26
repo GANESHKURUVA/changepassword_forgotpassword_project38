@@ -1,0 +1,47 @@
+{% extends 'dummy.html' %}
+{% block title %}
+<title>HOME</title>
+{% endblock %}
+
+
+{% block body_block %}
+{% if username %}
+<h1>Welcome To Home Page Mr/Ms {{username}} </h1> <style>
+    h1{
+        background-color: yellow;
+        color: blue;
+    }
+    a{
+        text-decoration: aqua;
+        float: left;
+
+    }
+</style>
+{% else %}
+<h1>Welcome To Home Page </h1>
+{% endif %}
+<div>
+    <section>
+        <a href="{% url 'about' %}">ABOUT</a> <br><br>
+        <a href="{% url 'family' %}">LORD HANUMAN FAMILY</a><br><br>
+        <a href="{% url 'powers' %}">HANUMAN POWERS</a><br><br>
+        <article>
+            <img src="https://vedicsources.com/wp-content/uploads/2019/07/Hanuman-mantras-meaning-and-benefits.jpg" alt="" >
+            <h2 style="color: rgb(255, 102, 0);font-style:italic" id="c">LORD HANUMAN</h2>
+        
+            <h4 style="font-size: smaller;font-style: italic;">Lord Hanuman is worshipped by all sects of Hindu, he is a universal God. Hanuman is known as a popular
+                devotee of Lord Rama. His help enabled Rama to rescue Sita Devi and then defeat Ravana in the war.
+                Hanuman is a symbol of success and fulfillment. One needs courage, strength, intelligence,
+                commitment and purity to be successful. Hanuman gets courage from his father – Kesari (Kesari means Lion),
+                strength and Purity from his Father – Vayu. Intelligence from his mother – Anjana (Gurukripa) and Commitment 
+                from his Guru Surya – Come what may the Sun rises every day in the morning. Hanuman is known by different names.</h4>
+             <style>
+                img{
+                    width: 400px;
+                    height: 300px;
+                }
+            </style>
+        </article>
+    </section>
+</div>
+{% endblock %}

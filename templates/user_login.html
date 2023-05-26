@@ -1,0 +1,38 @@
+{% extends 'dummy.html' %}
+{% block title %}
+<title>UESR_LOGIN FORM</title>
+<style>
+  body{
+    background-image: url('https://th.bing.com/th/id/OIP.Cg3T_BCrjcU2WjbIYV2ZhgHaEK?w=333&h=187&c=7&r=0&o=5&pid=1.7');
+    background-size: cover;
+  }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<body>
+<h1>USER LOGIN FORM</h1>
+<center>
+    <fieldset style="width: fit-content;">
+<form action="" method="POST" >
+ {% csrf_token %}
+
+ <div class="input-group flex-nowrap">
+    <span class="input-group-text" id="addon-wrapping">USERNAME</span>
+    <label for="username"></label>
+    <input required type="text" class="form-control" placeholder="username" aria-label="username" aria-describedby="addon-wrapping" name="username" id="username">
+  </div><br>
+ <div class="input-group flex-nowrap">
+    <span class="input-group-text" id="addon-wrapping">PASSWORD:</span>
+    <label for="password"></label>
+    <input required type="password" class="form-control" placeholder="password" aria-label="password" aria-describedby="addon-wrapping" name="password" id="password">
+  </div><br><br>
+  
+ <input type="submit" value="LOGIN"><br><br>
+ <a href="{% url 'forgotpassword' %}">forgot_password</a><br><br>
+
+</form>
+</fieldset>
+</center>
+</body>
+{% endblock %}

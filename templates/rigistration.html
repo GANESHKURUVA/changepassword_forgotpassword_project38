@@ -1,0 +1,26 @@
+
+{% extends 'dummy.html' %}
+{% block title %}
+<title>RIGISTRATION</title>
+{% endblock %}
+<body>
+    {% block body_block %} 
+
+    
+    <center>
+        <fieldset style="width: fit-content;">
+        <legend>RIGISTRATION FORM</legend>
+        <form action="" method="POST" enctype="multipart/form-data" >
+         {% csrf_token %}
+            {{ufo.as_p}}
+            {{pfo.as_p}}
+
+
+         <input type="submit" value="rigester">
+
+        </form>
+        </fieldset>
+    </center>
+    {% endblock %}
+</body>
+</html>
